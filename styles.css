@@ -446,8 +446,8 @@
       } 
 
    .logo {
-    width: 46px;
-    height: 26px;
+    width: 60px;
+    height: 34px;
   }
 
   }
@@ -465,6 +465,7 @@
   .sidebar::-webkit-scrollbar-track {
     background: transparent;
   }
+
 
 
 
