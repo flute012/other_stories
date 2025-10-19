@@ -1,5 +1,6 @@
 # 課程學習活動網站UI設計展示
-<p align="center">草圖展示
+**草圖展示**
+<p align="Left">
   <img src="https://flute012.github.io/other_stories/draft.png" alt="草圖展示" width="200">
 </p>
 
