@@ -403,7 +403,7 @@ body {
   .logo {
     width: 65px;
     height: 65px;
-    left:-5px;
+    left:-10px;
   }
 
   .top-section {
@@ -463,5 +463,6 @@ body {
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 
 
