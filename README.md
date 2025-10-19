@@ -1,6 +1,6 @@
 # 課程學習活動網站UI設計展示
-<p align="center">
-  <img src="https://flute012.github.io/other_stories/draft.png" alt="專案示意圖" width="200">
+<p align="center">草圖展示
+  <img src="https://flute012.github.io/other_stories/draft.png" alt="草圖展示" width="200">
 </p>
 
 **展示：** https://flute012.github.io/other_stories/
