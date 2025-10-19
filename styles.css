@@ -384,8 +384,8 @@ body {
   }
 
   .lesson-title {
-    font-size: 36px;
-    padding: 30px;
+    font-size: 28px;
+    padding: 24px;
   }
 
   /* 課次圓圈放大 */
@@ -509,6 +509,7 @@ body {
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 
 
 
