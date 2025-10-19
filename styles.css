@@ -449,7 +449,13 @@
     width: 60px;
     height: 34px;
   }
-
+      
+  .action-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+  }
+      
   }
   
   /* 捲軸美化 */
@@ -465,6 +471,7 @@
   .sidebar::-webkit-scrollbar-track {
     background: transparent;
   }
+
 
 
 
