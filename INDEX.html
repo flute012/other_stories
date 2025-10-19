@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>課程學習系統</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- 頂部區域 -->
+    <div class="top-section">
+      <!-- Logo 和課次標籤 -->
+      <div class="header">
+        <img src="violet.png" alt="Logo" class="logo">
+        <div class="lesson-tabs" id="lessonTabs"></div>
+      </div>
+      
+      <!-- 導航點 -->
+      <div class="nav-dots-container" id="navDots"></div>
+    </div>
+
+    <!-- 內容區域 -->
+    <div class="content-area">
+      <!-- 左側冊次列表 -->
+      <div class="sidebar" id="bookList"></div>
+
+      <!-- 課程滑動區域 -->
+      <div class="lesson-slider-container" id="lessonSlider"></div>
+    </div>
+  </div>
+
+  <script type="module">
+    import LessonSlider from './LessonSlider.js';
+    import NavDots from './NavDots.js';
+    import { booksData, getLessonsForBook } from './data.js';
+
+    // 全域變數
+    let currentBookIndex = 0;
+    let currentLessonsData = [];
+    let lessonSlider;
+    let navDots;
+    let lessonTabs;
+
+    // 初始化冊次列表
+    function initBookList() {
+      const bookList = document.getElementById('bookList');
+      
+      booksData.forEach((book, index) => {
+        const bookItem = document.createElement('div');
+        bookItem.className = 'book-item';
+        if (index === 0) {
+          bookItem.classList.add('active');
+        }
+        
+        bookItem.innerHTML = `
+          <img src="${book.image}" alt="${book.name}">
+          <span>${book.name}</span>
+        `;
+        
+        bookItem.addEventListener('click', () => {
+          switchBook(index);
+        });
+        
+        bookList.appendChild(bookItem);
+      });
+    }
+
+    // 切換冊次
+    function switchBook(bookIndex) {
+      console.log(`切換到${booksData[bookIndex].name}`);
+      
+      // 更新側邊欄 active 狀態
+      document.querySelectorAll('.book-item').forEach((item, idx) => {
+        if (idx === bookIndex) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+      
+      // 更新當前冊次資料
+      currentBookIndex = bookIndex;
+      currentLessonsData = getLessonsForBook(bookIndex);
+      
+      // 更新滑動器
+      lessonSlider.setBook(bookIndex, currentLessonsData);
+      
+      // 重置導航點
+      navDots.setActive(0);
+      
+      // 重置課次標籤
+      lessonTabs.reset(currentLessonsData);
+    }
+
+    // 初始化課次標籤
+    function initLessonTabs() {
+      const tabsContainer = document.getElementById('lessonTabs');
+      const visibleTabs = 5;
+      const centerIndex = Math.floor(visibleTabs / 2);
+      
+      console.log('=== 開始生成課次標籤 ===');
+      console.log('容器元素:', tabsContainer);
+      console.log('當前課程資料長度:', currentLessonsData.length);
+      console.log('要顯示的標籤數:', visibleTabs);
+      
+      if (!currentLessonsData || currentLessonsData.length === 0) {
+        console.error('❌ 錯誤：currentLessonsData 是空的！');
+        return;
+      }
+      
+      // 清空容器
+      tabsContainer.innerHTML = '';
+      
+      // 生成初始標籤
+      for (let i = 0; i < visibleTabs && i < currentLessonsData.length; i++) {
+        const tab = document.createElement('div');
+        tab.className = 'lesson-tab';
+        if (i === centerIndex) {
+          tab.classList.add('active');
+        }
+        tab.textContent = currentLessonsData[i].code;
+        tab.dataset.lessonIndex = i;
+        tabsContainer.appendChild(tab);
+        console.log(`  生成標籤 ${i}:`, currentLessonsData[i].code);
+      }
+      
+      const tabs = tabsContainer.querySelectorAll('.lesson-tab');
+      console.log('✓ 標籤生成完成，總數:', tabs.length);
+      console.log('=== 課次標籤生成結束 ===');
+      
+      return {
+        tabs: tabs,
+        reset: function(lessonsData) {
+          console.log('重置課次標籤，新課程數:', lessonsData.length);
+          this.tabs.forEach((tab, i) => {
+            if (lessonsData[i]) {
+              tab.textContent = lessonsData[i].code;
+              tab.dataset.lessonIndex = i;
+              tab.style.display = 'flex';
+              
+              if (i === centerIndex) {
+                tab.classList.add('active');
+              } else {
+                tab.classList.remove('active');
+              }
+            } else {
+              tab.style.display = 'none';
+            }
+          });
+        },
+        update: function(currentIndex) {
+          const lessonsData = currentLessonsData;
+          let startIndex = Math.max(0, currentIndex - centerIndex);
+          const endIndex = Math.min(lessonsData.length, startIndex + visibleTabs);
+          
+          if (endIndex === lessonsData.length) {
+            startIndex = Math.max(0, lessonsData.length - visibleTabs);
+          }
+          
+          this.tabs.forEach((tab, i) => {
+            const lessonIndex = startIndex + i;
+            if (lessonIndex < lessonsData.length) {
+              tab.textContent = lessonsData[lessonIndex].code;
+              tab.dataset.lessonIndex = lessonIndex;
+              tab.style.display = 'flex';
+              
+              if (lessonIndex === currentIndex) {
+                tab.classList.add('active');
+              } else {
+                tab.classList.remove('active');
+              }
+            } else {
+              tab.style.display = 'none';
+            }
+          });
+        },
+        bindClickEvents: function() {
+          console.log('綁定課次標籤點擊事件');
+          this.tabs.forEach((tab, idx) => {
+            tab.addEventListener('click', () => {
+              const lessonIndex = parseInt(tab.dataset.lessonIndex);
+              console.log('點擊課次標籤:', tab.textContent, '索引:', lessonIndex);
+              if (!isNaN(lessonIndex)) {
+                lessonSlider.goTo(lessonIndex);
+              }
+            });
+          });
+          console.log('✓ 點擊事件綁定完成');
+        }
+      };
+    }
+
+    // 等待 DOM 載入
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('開始初始化...');
+      
+      // 1. 取得第一冊的課程資料（最先執行）
+      currentLessonsData = getLessonsForBook(0);
+      console.log('✓ 載入第一冊資料，課程數:', currentLessonsData.length);
+      console.log('第一課資料:', currentLessonsData[0]);
+      
+      // 2. 初始化冊次列表
+      initBookList();
+      console.log('✓ 冊次列表初始化完成');
+      
+      // 3. 初始化課次標籤（確保 currentLessonsData 已載入）
+      lessonTabs = initLessonTabs();
+      lessonTabs.bindClickEvents();
+      console.log('✓ 課次標籤初始化完成，顯示:', lessonTabs.tabs.length, '個標籤');
+      
+      // 4. 初始化導航點
+      navDots = new NavDots(document.getElementById('navDots'), {
+        onDotClick: (lessonIndex) => {
+          lessonSlider.goTo(lessonIndex);
+        }
+      });
+      console.log('✓ 導航點初始化完成');
+
+      // 5. 初始化課程滑動器
+      lessonSlider = new LessonSlider(document.getElementById('lessonSlider'), {
+        onSlideChange: (lessonIndex, dotIndex) => {
+          navDots.setActive(dotIndex);
+          lessonTabs.update(lessonIndex);
+        }
+      });
+      lessonSlider.setBook(0, currentLessonsData);
+      console.log('✓ 課程滑動器初始化完成');
+      
+      console.log('🎉 所有初始化完成！');
+    });
+  </script>
+</body>
+</html>
