@@ -434,9 +434,6 @@
     .sidebar {
       width: 90px;
     }
-    .logo {
-        display: none;
-      }
     
       .lesson-tab {
         font-size: 13px;
@@ -463,6 +460,7 @@
   .sidebar::-webkit-scrollbar-track {
     background: transparent;
   }
+
 
 
 
