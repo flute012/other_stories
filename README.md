@@ -1,5 +1,7 @@
 # 課程學習活動網站UI設計展示
-![專案示意圖](https://flute012.github.io/other_stories/draft.png){width=300px}
+<p align="center">
+  <img src="https://flute012.github.io/other_stories/draft.png" alt="專案示意圖" width="500">
+</p>
 
 **展示：** https://flute012.github.io/other_stories/
 ### 解決方案
