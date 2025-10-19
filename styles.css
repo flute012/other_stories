@@ -74,7 +74,7 @@ body {
 }
 
 .lesson-tab.active {
-  border-color: #333;
+  border-color: #6B6B7D;
   box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
   transform: scale(1.15);
   z-index: 1;
@@ -154,7 +154,7 @@ body {
 }
 
 .book-item.active {
-  box-shadow: 0 0 0 3px #7878ff;
+  box-shadow: 0 0 0 3px #6B6B7D;
   transform: translateX(5px);
 }
 
@@ -490,10 +490,6 @@ body {
     width: 65px;
     height: 85px;
   }
-
-  .sidebar {
-    width: 80px;
-  }
 }
 
 /* 捲軸美化 */
@@ -509,6 +505,7 @@ body {
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 
 
 
