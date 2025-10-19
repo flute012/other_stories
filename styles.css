@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* 主容器 */
@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   background: #f5f5f5;
+  overflow: hidden;
 }
 
 /* 頂部區域 */
@@ -180,6 +181,7 @@ body {
   flex: 1;
   position: relative;
   overflow: hidden;
+  min-height: 0;
 }
 
 .lesson-wrapper {
@@ -192,6 +194,20 @@ body {
   cursor: grab;
   touch-action: pan-x;
   user-select: none;
+  overflow-y: auto;
+}
+
+.lesson-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lesson-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+
+.lesson-wrapper::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
 }
 
 .lesson-wrapper::before {
@@ -401,9 +417,7 @@ body {
 /* 手機版響應式 (螢幕寬度 < 480px) */
 @media (max-width: 480px) {
   .logo {
-    width: 65px;
-    height: 65px;
-    left:-10px;
+    display: none;
   }
 
   .top-section {
@@ -415,19 +429,20 @@ body {
     min-height: 50px;
   }
 
+  .lesson-tab {
+    width: 45px;
+    height: 45px;
+    font-size: 12px;
+  }
+
+  .lesson-tab.active {
+    transform: scale(1.1);
+  }
+
   .nav-dots-container {
     margin-top: 5px;
   }
 
-  .lesson-tab {
-  width: 46px;
-  height: 46px;
-  font-size: 12px;
-  }
-  
-  .lesson-tab.active {
-    transform: scale(1.1);
-  }
   .lesson-title {
     font-size: 22px;
     padding: 15px;
@@ -455,7 +470,7 @@ body {
   }
 
   .sidebar {
-    width: 80px;
+    width: 75px;
   }
 }
 
@@ -472,11 +487,3 @@ body {
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
-
-
-
-
-
-
-
-
