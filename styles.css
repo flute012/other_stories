@@ -399,9 +399,18 @@
   
   /* 手機版響應式 (螢幕寬度 < 480px) */
   @media (max-width: 480px) {
+    .top-section {
+        flex-shrink: 0;
+        background: #fcf8ff;
+        padding: 15px 15px 5px 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 20;
+      }
+      
+
     .lesson-title {
       font-size: 20px;
-      padding: 15px;
+      padding: 10px;
     }
     
     .food-icon-wrapper {
@@ -441,6 +450,11 @@
       .actions-section {
         padding: 5px 10px 10px 20px;
       } 
+
+      .lesson-tab {
+        width: 50px;
+        height: 50px;
+        }
   }
   
   /* 捲軸美化 */
@@ -456,4 +470,5 @@
   .sidebar::-webkit-scrollbar-track {
     background: transparent;
   }
+
 
