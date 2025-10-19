@@ -219,7 +219,7 @@ body {
   padding: 30px 20px 40px;
   position: relative;
   z-index: 1;
-  gap: 2%;
+  gap: 1%;
 }
 
 .lesson-title {
@@ -402,6 +402,19 @@ body {
 @media (max-width: 480px) {
   .logo {
     display: none;
+  }
+
+  .top-section {
+    padding: 10px 15px;
+  }
+
+  .header {
+    margin-bottom: 8px;
+    min-height: 50px;
+  }
+
+  .nav-dots-container {
+    margin-top: 5px;
   }
 
   .lesson-title {
