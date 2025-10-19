@@ -50,15 +50,15 @@ body {
 
 .lesson-tabs {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   justify-content: center;
   flex: 1;
 }
 
 .lesson-tab {
-  width: 48.5px;
-  height: 48.5px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 2px solid #ddd;
   background: #fff;
@@ -509,6 +509,7 @@ body {
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 
 
 
