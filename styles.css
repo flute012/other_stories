@@ -36,7 +36,7 @@
     margin-bottom: 15px;
     gap: 20px;
     position: relative;
-    min-height: 60px;
+    min-height: 50px;
   }
   
   .logo {
@@ -399,6 +399,10 @@
   
   /* 手機版響應式 (螢幕寬度 < 480px) */
   @media (max-width: 480px) {
+      .header {
+        min-height: 45px;
+      }
+    
     .top-section {
         flex-shrink: 0;
         background: #fcf8ff;
@@ -442,19 +446,15 @@
       }
     
       .lesson-tab {
-        font-size: 15px;
-        width: 45px;
-        height: 45px;
+        font-size: 13px;
+        width: 35px;
+        height: 35px;
       }
 
       .actions-section {
         padding: 5px 10px 10px 20px;
       } 
 
-      .lesson-tab {
-        width: 50px;
-        height: 50px;
-        }
   }
   
   /* 捲軸美化 */
@@ -470,5 +470,6 @@
   .sidebar::-webkit-scrollbar-track {
     background: transparent;
   }
+
 
 
