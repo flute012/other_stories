@@ -423,7 +423,7 @@
     .btn-article,
     .btn-vocab {
       font-size: 16px;
-      padding: 12px 20px;
+      padding: 8px 20px;
     }
   
     .book-item {
@@ -463,6 +463,7 @@
   .sidebar::-webkit-scrollbar-track {
     background: transparent;
   }
+
 
 
 
