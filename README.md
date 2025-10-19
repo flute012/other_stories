@@ -1,6 +1,6 @@
 # 課程學習活動網站UI設計展示
-![專案示意圖](https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=Interactive+Learning+System)
-
+![專案示意圖](https://flute012.github.io/other_stories/draft.png)
+**展示：** https://flute012.github.io/other_stories/
 ### 解決方案
 
 將三層資訊整合為**單一介面**，使用者可以在同一個畫面中：
