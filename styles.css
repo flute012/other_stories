@@ -399,16 +399,8 @@
   
   /* 手機版響應式 (螢幕寬度 < 480px) */
   @media (max-width: 480px) {
-      .header {
-        min-height: 45px;
-      }
-    
     .top-section {
-        flex-shrink: 0;
-        background: #fcf8ff;
-        padding: 15px 15px 5px 15px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        z-index: 20;
+        padding: 10px 15px 5px 15px;
       }
       
 
@@ -470,6 +462,7 @@
   .sidebar::-webkit-scrollbar-track {
     background: transparent;
   }
+
 
 
 
