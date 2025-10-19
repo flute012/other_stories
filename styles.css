@@ -492,7 +492,7 @@ body {
   }
 
   .sidebar {
-    width: 75px;
+    width: 80px;
   }
 }
 
@@ -509,6 +509,7 @@ body {
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 
 
 
