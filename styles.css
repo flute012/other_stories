@@ -235,7 +235,7 @@ body {
   padding: 30px 20px 40px;
   position: relative;
   z-index: 1;
-  gap: 5%;
+  gap: 1%;
 }
 
 .lesson-title {
@@ -388,29 +388,51 @@ body {
     padding: 30px;
   }
 
+  /* 課次圓圈放大 */
+  .lesson-tab {
+    width: 65px;
+    height: 65px;
+    font-size: 16px;
+    gap: 15px;
+  }
+
+  .lesson-tab.active {
+    transform: scale(1.2);
+  }
+
+  /* 功能按鈕改為 4x2 網格 */
   .actions-section {
-    max-width: 500px;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 600px;
   }
 
   .action-row {
-    gap: 30px;
+    display: contents;
+  }
+
+  .action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .action-icon-wrapper {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
 
   .action-icon {
-    width: 75px;
-    height: 75px;
+    width: 68px;
+    height: 68px;
   }
 
   .btn-action {
-    font-size: 18px;
-    padding: 10px 25px;
-    min-width: 100px;
+    font-size: 16px;
+    padding: 8px 20px;
+    min-width: 90px;
   }
 }
 
