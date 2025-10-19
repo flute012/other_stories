@@ -410,13 +410,13 @@
     }
     
     .food-icon-wrapper {
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
     }
     
     .food-icon {
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
     }
     
     .btn-article,
@@ -444,7 +444,7 @@
       }
 
       .actions-section {
-        padding: 5px 10px 10px 20px;
+        padding: 5px 10px 10px 15px;
       } 
 
   }
@@ -462,6 +462,7 @@
   .sidebar::-webkit-scrollbar-track {
     background: transparent;
   }
+
 
 
 
