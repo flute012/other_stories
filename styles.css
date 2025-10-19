@@ -401,8 +401,9 @@ body {
 /* 手機版響應式 (螢幕寬度 < 480px) */
 @media (max-width: 480px) {
   .logo {
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
+    left:-5px;
   }
 
   .top-section {
@@ -462,4 +463,5 @@ body {
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 
