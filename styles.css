@@ -219,7 +219,7 @@ body {
   padding: 30px 20px 40px;
   position: relative;
   z-index: 1;
-  gap: 3%;
+  gap: 5%;
 }
 
 .lesson-title {
@@ -472,6 +472,7 @@ body {
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 
 
 
