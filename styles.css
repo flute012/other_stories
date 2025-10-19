@@ -422,9 +422,12 @@ body {
   .lesson-tab {
   width: 46px;
   height: 46px;
-  font-size: 13px;
+  font-size: 12px;
   }
   
+  .lesson-tab.active {
+    transform: scale(1.1);
+  }
   .lesson-title {
     font-size: 22px;
     padding: 15px;
@@ -469,6 +472,7 @@ body {
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 
 
 
