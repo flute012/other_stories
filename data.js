@@ -35,18 +35,6 @@ const actionButtons = [
       name: '測驗',
       icon: 'https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-N45xAyyAA1PKdWLzT08vHiTdeZYna1.png&w=320&q=75',
       bgColor: 'test-bg'
-    },
-    {
-      id: 7,
-      name: '練習',
-      icon: 'https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-gnOTLqYJxZduhYnE0iXPyZPSdADmTe.png&w=320&q=75',
-      bgColor: 'practice-bg'
-    },
-    {
-      id: 8,
-      name: '複習',
-      icon: 'https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-cNlWOddxqGU4KfqpqGTaOdJdDaO2nd.png&w=320&q=75',
-      bgColor: 'review-bg'
     }
   ];
   
@@ -164,3 +152,4 @@ const actionButtons = [
     getTotalDots
 
   };
+
