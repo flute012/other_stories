@@ -24,7 +24,7 @@ body {
 .top-section {
   flex-shrink: 0;
   background: #fff;
-  padding: 20px;
+  padding: 15px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   z-index: 20;
 }
@@ -34,8 +34,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
-  gap: 20px;
+  margin-bottom: 10px;
+  gap: 15px;
   position: relative;
   min-height: 60px;
 }
@@ -57,15 +57,15 @@ body {
 }
 
 .lesson-tab {
-  width: 52.5px;
-  height: 52.5px;
+  width: 48.5px;
+  height: 48.5px;
   border-radius: 50%;
   border: 2px solid #ddd;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   color: #666;
   cursor: pointer;
@@ -509,5 +509,6 @@ body {
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 
 
