@@ -114,15 +114,15 @@ const actionButtons = [
       name: '第四冊',
       image: 'https://i.pinimg.com/736x/fd/68/2c/fd682c78d496ab4e22f5ee9fba3dc0c7.jpg',
       lessons: [
-        { code: 'L01', title: '第四冊課程1', bgImage: 'https://i.pinimg.com/1200x/e4/bb/44/e4bb4417eef0efc4f8aa40af25405775.jpg' },
-        { code: 'L02', title: '第四冊課程2', bgImage: 'https://i.pinimg.com/736x/e2/ed/0a/e2ed0a0ac29d937d48f8e3df4e9936f8.jpg' },
-        { code: 'L03', title: '第四冊課程3', bgImage: 'https://i.pinimg.com/736x/20/ca/f1/20caf1016ca8e20a7caff36ea03e6eff.jpg' },
-        { code: 'L04', title: '第四冊課程4', bgImage: 'https://i.pinimg.com/736x/40/0b/b0/400bb08d90f693e213e493662f217e1f.jpg' },
-        { code: 'L05', title: '第四冊課程5', bgImage: 'https://i.pinimg.com/736x/28/da/df/28dadf0c710f6e0a5d83cfe8cc197b10.jpg' },
-        { code: 'L06', title: '第四冊課程6', bgImage: 'https://i.pinimg.com/736x/95/4c/3c/954c3cbd700d45f4e31dab5c23a17b69.jpg' },
-        { code: 'L07', title: '第四冊課程7', bgImage: 'https://i.pinimg.com/736x/2a/12/31/2a1231ac2e31ba970a154d1954cd0dd7.jpg' },
-        { code: 'L08', title: '第四冊課程8', bgImage: 'https://i.pinimg.com/736x/10/fc/6e/10fc6e605b80f9d048828105b8313cc0.jpg' },
-        { code: 'L09', title: '第四冊課程9', bgImage: 'https://i.pinimg.com/736x/28/39/fe/2839fe07c7e423ea75e9cea925c9b67c.jpg' },
+        { code: 'L01', title: 'The Pathfinder: Or the Inland Sea', bgImage: 'https://i.pinimg.com/1200x/e4/bb/44/e4bb4417eef0efc4f8aa40af25405775.jpg' },
+        { code: 'L02', title: 'On the Sublime and Beautiful', bgImage: 'https://i.pinimg.com/736x/e2/ed/0a/e2ed0a0ac29d937d48f8e3df4e9936f8.jpg' },
+        { code: 'L03', title: 'The Adventure of the Christmas Pudding', bgImage: 'https://i.pinimg.com/736x/20/ca/f1/20caf1016ca8e20a7caff36ea03e6eff.jpg' },
+        { code: 'L04', title: 'My Life: the story of a provincial', bgImage: 'https://i.pinimg.com/736x/40/0b/b0/400bb08d90f693e213e493662f217e1f.jpg' },
+        { code: 'L05', title: 'All Roads Lead to Calvary', bgImage: 'https://i.pinimg.com/736x/28/da/df/28dadf0c710f6e0a5d83cfe8cc197b10.jpg' },
+        { code: 'L06', title: 'The Sun Also Rises', bgImage: 'https://i.pinimg.com/736x/95/4c/3c/954c3cbd700d45f4e31dab5c23a17b69.jpg' },
+        { code: 'L07', title: 'Sam Walton: Made In America', bgImage: 'https://i.pinimg.com/736x/2a/12/31/2a1231ac2e31ba970a154d1954cd0dd7.jpg' },
+        { code: 'L08', title: 'The Adventures of Roderick Random', bgImage: 'https://i.pinimg.com/736x/10/fc/6e/10fc6e605b80f9d048828105b8313cc0.jpg' },
+        { code: 'L09', title: 'Tuesdays with Morrie', bgImage: 'https://i.pinimg.com/736x/28/39/fe/2839fe07c7e423ea75e9cea925c9b67c.jpg' },
         { code: 'L10', title: '第四冊課程10', bgImage: 'https://i.pinimg.com/736x/a9/bc/2a/a9bc2ac3c01a0cdc6dd0bcf4e392883d.jpg' },
         { code: 'L11', title: '第四冊課程11', bgImage: 'https://i.pinimg.com/736x/8f/81/8c/8f818cf18d7f8ee5fc4d795dabfa794e.jpg' },
         { code: 'L12', title: '第四冊課程12', bgImage: 'https://i.pinimg.com/736x/e1/e7/5a/e1e75a5d6d98e24b807de6f1834183fc.jpg' }
@@ -162,4 +162,5 @@ const actionButtons = [
     getDotIndex, 
     getFirstLessonIndex,
     getTotalDots
+
   };
