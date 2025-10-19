@@ -446,8 +446,8 @@
       } 
 
    .logo {
-    width: 60px;
-    height: 34px;
+    width: 80px;
+    height: 45px;
   }
       
   .action-icon {
@@ -471,6 +471,7 @@
   .sidebar::-webkit-scrollbar-track {
     background: transparent;
   }
+
 
 
 
