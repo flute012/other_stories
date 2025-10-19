@@ -445,6 +445,11 @@
         padding: 5px 10px 10px 15px;
       } 
 
+   .logo {
+    width: 46px;
+    height: 26px;
+  }
+
   }
   
   /* 捲軸美化 */
@@ -460,6 +465,7 @@
   .sidebar::-webkit-scrollbar-track {
     background: transparent;
   }
+
 
 
 
